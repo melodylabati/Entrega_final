@@ -1,0 +1,776 @@
+@charset "UTF-8";
+/*Reset básico*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Body*/
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/*Nav*/
+header {
+  background: #222;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+header logo img {
+  height: 50px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+}
+header nav a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+header nav a:hover {
+  color: #8e3e8d;
+  border-bottom: 3px solid #8e3e8d;
+  padding-bottom: 3px;
+}
+header .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+header nav-links li {
+  margin: 0;
+}
+header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.section {
+  padding: 4rem;
+}
+
+/*Main*/
+main .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 120px 4rem;
+  background: url(../img/portfolio.png) no-repeat center center/cover;
+  min-height: 100vh;
+  /* background-size: cover;
+     @include flex(flex-start, center);*/
+}
+main .hero-text {
+  flex: 1 1 30%;
+  max-width: 500px;
+}
+main .hero-text-logo {
+  flex: 1 1 40%;
+  max-width: 600px;
+}
+main .hero-text {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+main .hero-text p {
+  margin-bottom: 1.5rem;
+}
+main .hero-text-logo {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-right: 2rem;
+}
+main .hero-text-logo h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+main .hero-text-logo .cursiva {
+  font-style: italic;
+  font-family: "Xanh Mono", serif;
+}
+main .hero-text-logo .linea {
+  border: none;
+  height: 14px;
+  background: white;
+  margin: 0;
+  width: 130%;
+}
+main .hero-text-logo .linea-superior {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+main .hero-text-logo .big-text {
+  font-family: "Myriad Pro", Bold;
+  font-size: 14rem;
+  line-height: 0.8;
+  margin: 0;
+}
+main .hero-text-logo .linea-inferior {
+  margin-top: 0.3rem;
+}
+
+  /*Animación texto*/
+main .hero-text-logo .moving-text {
+  position: relative;
+  z-index: 10;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  width: 130%;
+  background: transparent;
+  margin-top: 1.5rem;
+}
+main .hero-text-logo .moving-text .text-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveText 15s linear infinite;
+}
+main .hero-text-logo .moving-text .text-track span {
+  font-family: "Xanh Mono", monospace;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  filter: brightness(1.1);
+  letter-spacing: 2px;
+  text-transform: none;
+  opacity: 2;
+}
+
+  /*Buttons*/
+main .btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .btn-primary {
+  background: #8e3e8d;
+  color: #fff;
+  border: none;
+}
+main .btn-primary:hover {
+  background: #6a00a4;
+  color: #fff;
+  transform: scale(1.05);
+}
+main .btn-secondary {
+  background: transparent;
+  color: #8e3e8d;
+  border: 3px solid #8e3e8d;
+}
+main .btn-secondary:hover {
+  background: #8e3e8d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+  /*Projects*/
+main .projects {
+  text-align: center;
+}
+main .projects h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+main .projects p {
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #555;
+}
+main .projects-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
+}
+
+  /*Cards*/
+main .project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+  transition: box-shadow 0.2s ease-out;
+}
+main .project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+main .project-card:hover {
+  transform: translate(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+main .project-card h3 {
+  margin-bottom: 0.75rem;
+}
+main .project-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+main .project-card .btn {
+  margin-top: auto;
+}
+
+  /*About*/
+main main #about h2 {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+main .about {
+  text-align: left;
+  padding: 0 2rem;
+}
+main .about-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+  min-width: 300px;
+}
+main .about-text {
+  flex: 1;
+  min-width: 280px;
+}
+main .about-text h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+main .accordion-header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #8e3e8d;
+  color: #fff;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+main .accordion-header:hover {
+  background-color: #6a00a4;
+}
+main .icon-toggle {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+main .icon-toggle:before, main .icon-toggle:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+main .icon-toggle:before {
+  width: 3px;
+  height: 100%;
+  left: 6px;
+  top: 0;
+}
+main .icon-toggle:after {
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: 6px;
+}
+main .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  padding: 0 1.5rem;
+}
+main .accordion-content p {
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  color: #333;
+}
+main .accordion-toggle:checked + .accordion-header .icon-toggle:before {
+  transform: rotate(90deg) scaleX(0);
+}
+main .accordion-toggle:checked + .accordion-header ~ .accordion-content {
+  max-height: 500px;
+}
+main .about-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .bottom-image img {
+  width: 100%;
+  height: 491px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+  /*Skills*/
+main #skills h2 {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+main .skills-container {
+  display: flex;
+  justify-content: row;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 100px;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 260px;
+}
+main .skills-text-column {
+  flex: 0.9 1 450px;
+  min-width: 420px;
+}
+main .skills-text-column p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+main .skills-text-column .quote {
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-bottom: 2.5rem 0;
+  color: #555;
+}
+main .skills-text-column .btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+main #skills .skills-right {
+  flex: 1.1 1 680px;
+  display: flex;
+  flex-direction: column;
+  min-width: 520px;
+  padding: 0;
+  text-align: left;
+  align-items: flex-start;
+}
+main #skills .skills-right p {
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+main #skills .skills-right .skills-lists {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+main #skills .skills-right .skills-lists .skills-list {
+  flex: 1;
+  min-width: 220px;
+}
+main #skills .skills-right .skills-lists .skills-list h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+main #skills .skills-right .skills-lists .skills-list ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+main #skills .skills-right .skills-lists .skills-list ul li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+  /*Contact*/
+main #contact {
+  background-color: #fff;
+  text-align: left;
+}
+main #contact h2 {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+main .contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: space-between;
+  gap: 260px;
+}
+
+  /*Izquierda*/
+main .contact-left {
+  flex: 1;
+  min-width: 450px;
+}
+main .contact-left h3 {
+  margin-bottom: 1rem;
+}
+main .contact-left p {
+  margin: 0.3rem 0;
+  max-width: 90%;
+}
+
+  /*Derecha*/
+main .contact-right {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .contact-right .contact-columns {
+  display: flex;
+  justify-content: row;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+main .contact-right .contact-columns div {
+  flex: 1;
+}
+main .contact-right .contact-columns h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.emil {
+  margin-top: 1rem;
+}
+
+/*Botones sociales*/
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.social-links .social-btn {
+  width: 45px;
+  height: 45px;
+  border: 3px solid #8e3e8d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.social-links .social-btn img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+.social-links .social-btn:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+}
+
+/*Fotter*/
+footer {
+  background: #222;
+  padding: 4rem;
+  margin-top: 2rem;
+}
+footer hr {
+  margin: 2rem 0 1rem;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+footer .footer-rights {
+  text-align: center;
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.footer-nav h3, .footer-social h3 {
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.footer-nav ul, .footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav ul li, .footer-social ul li {
+  margin-bottom: 0.3rem;
+}
+.footer-nav a, .footer-social a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/*Definición*/
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/*Aplicación de animación*/
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/*Responsive design*/
+@media (max-width: 768px) {
+  /*Navbar*/
+  header {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #222;
+    display: none;
+    padding: 1rem 0;
+    gap: 1rem;
+    text-align: center;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  /*Botones*/
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  /*Hero Section*/
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .hero-text, .hero-text-logo {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 0;
+  }
+  .hero-text {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text-logo .big-text {
+    font-size: 6rem;
+  }
+  /*Proyectos*/
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  /*About*/
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+  .about-images {
+    width: 100%;
+    display: block;
+  }
+  .bottom-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  main #about h2 {
+    font-size: 1.5rem;
+  }
+  .accordion-item {
+    margin-bottom: 10px;
+  }
+  .accordion-header {
+    font-size: 1rem;
+  }
+  /*Skills*/
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .skills-text-column,
+  .skills-right {
+    max-width: 100%;
+    text-align: left;
+  }
+  .skills-right .skills-lists {
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .skills-list {
+    width: 100%;
+  }
+  /*Contact*/
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .contact-right {
+    align-items: center;
+  }
+  .contact-columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /*Footer*/
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .footer-nav ul, .footer-social ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  /*Moving text*/
+  .moving-text span {
+    font-size: 1rem;
+    animation: moveText 20s linear infinite;
+  }
+}
+@media (max-width: 576px) {
+  .hero-text-logo .big-text {
+    font-size: 4rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .project-card img {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

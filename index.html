@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link de mi css -->
+    <link rel="stylesheet" href="../Entrega_Final/css/main.css">
+    <title>MMLV - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <!-- Div para el logo -->
+        <div class="logo">
+            <img src="img/mmlv.png" alt="Logo_nav_mmlv">
+        </div>    
+        <!-- Etiquetas para menú de navegacion -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home/Hero section -->
+    <main>
+        <section id="home" class="hero section">
+
+            <!--Izquierda-->
+          <div class="hero-text">
+            <h1>Portfolio UX/UI</h1>
+            <p>Transformo la complejidad en experiencias de usuario fluidas. Explora mis procesos de research, prototipado e interacción que garantizan soluciones funcionales y viables.</p>
+            <a href="#projects" class="btn btn-primary">Ver casos de estudio</a>
+          </div>   
+
+          <!--Derecha-->
+          <div class="hero-text-logo">
+            <h1> Hola, soy <span class="cursiva">Melody</span></h1>
+            <hr class="linea linea-superior"/>
+            <h2 class="big-text">MMLV</h2>
+            <hr class="linea linea-inferior"/>
+
+          <!--Animación texto-->
+            <div class="moving-text">
+                <div class="text-track">
+                     <span>UX/UI Deisgner - Fashion Designer - Graphic Designer - UX/UI Designer - Fashion Designer - Graphic Designer - UX/UI Designer
+                     </span>
+                 </div>
+            </div>
+          </div>
+        </section>   
+
+        <!-- Projects section-->
+        <section id="projects" class="projects section">
+            <h2>Projects: Diseño & Soluciones Funcionales</h2>
+            <p>Aquí muestro la fase de pensamiento y la metodología detrás de cada solución. Explora cómo el research, el prototipado y mi comprensión de la viabilidad técnica se combinan para crear experiencias de usuario funcionales y eficientes.</p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="img/bipmovil.png" alt="Portada_proyecto_design_system_bipmovil">
+                    <h3>Design System: BIP Móvil</h3>
+                    <p>Creación de un Design System completo para la app, asegurando la consistencia de la marca, la eficiencia en el desarrollo y la escalabilidad del producto a largo plazo.</p>
+                    <a href="https://www.behance.net/gallery/226803215/Design-System-BIP-Movil" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver más</a>
+                </article>
+
+                <article class="project-card">
+                    <img src="img/bookcycle.png" alt="Portada_proyecto_bookcycle">
+                    <h3>Bookcycle: App de Intercambio de Libros</h3>
+                    <p>Diseño UX/UI de una plataforma para el intercambio fluido y seguro de libros. Centrado en el research del usuario para optimizar el flujo de búsqueda, match y encuentro entre lectores.</p>
+                    <a href="https://www.behance.net/gallery/199944939/Bookcycle-UXUI-Design" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver más</a>
+                </article>
+
+                <article class="project-card">
+                    <img src="img/meli.png" alt="Portada_proyecto_rediseño_mercado_libre">
+                    <h3>Mercado Libre: Re-design</h3>
+                    <p>Propuesta de rediseño de una feature clave. Análisis de usabilidad y arquitectura para simplificar el flujo y mejorar la experiencia de compra en una plataforma de alto volumen.</p>
+                    <a href="https://www.behance.net/gallery/191185761/Mercado-Libre-Redesign-proposal-e-commerce-UX-UI" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver más</a>
+                </article>
+            </div>    
+        </section>
+
+        <!-- About section-->
+        <section id="about" class="about section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About: Mi Trayectoria & Enfoque</h2>
+                    <h3>Diseño con Visión 360º</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-1" class="accordion-toggle" hidden>
+                            <label for="accordion-1" class="accordion-header">
+                                Del producto físico al digital
+                                <span class="icon-toggle"></span>
+                            </label>
+                            <div class="accordion-content">
+                                <p>Soy Diseñadora UX/UI, pero mi trayectoria profesional inició en el Diseño Textil y de Indumentaria, un campo donde aprendí que la creación de un producto siempre debe estar centrada en el usuario, prestando especial atención al detalle, la inclusión y la accesibilidad en el uso diario. Esta base en la empatía y el testing constante es lo que ahora traslado al diseño digital.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-2" class="accordion-toggle" hidden>
+                            <label for="accordion-2" class="accordion-header">
+                                La ventaja técnica y el proceso
+                                <span class="icon-toggle"></span>
+                            </label>
+                            <div class="accordion-content">
+                                <p>Mi foco actual es la solución de problemas complejos en el entorno digital. Mi proceso es riguroso: desde el research y el análisis de datos hasta el prototipado y el testeo de usabilidad. Una ventaja clave es mi conocimiento en Desarrollo Web, lo que me permite diseñar interfaces funcionales y viables que se integran de manera fluida y eficiente con el trabajo del equipo de desarrollo.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-3" class="accordion-toggle" hidden>
+                            <label for="accordion-3" class="accordion-header">
+                                Mi enfoque actual
+                                <span class="icon-toggle"></span>
+                            </label>
+                            <div class="accordion-content">
+                                <p>Tras haber aplicado mi metodología en proyectos reales y equipos internacionales (como CO-UX y GAOTek), mi meta es encontrar un rol remoto como UX/UI Designer. Busco un equipo donde pueda contribuir con una visión integral, y donde se valore la innovación, la colaboración multidisciplinar y el diseño que genera un impacto positivo y medible en el negocio.</p>
+                            </div>
+                        </div>   
+                    </div>                 
+                </div>
+                <div class="about-images">
+                    <div class="bottom-image">
+                        <img src="img/About.jpg" alt="Retrato_de_la_diseñadora_Melody">
+                    </div>
+                </div>           
+            </div>
+        </section>
+
+        <!-- Skills section-->
+        <section id="skills" class="section">
+            <div class="skills-container">
+                <!-- Columna izquierda -->
+                <div class="skills-text-column">
+                    <h2>Skills: El proceso es la clave</h2>
+                    <p>Mi enfoque en el diseño se basa en la curiosidad continua y la metodología rigurosa. Cada proyecto es una oportunidad para entender mejor al usuario y transformar un desafío en una solución funcional y accesible. Creo firmemente que la empatía más el proceso iterativo es la fórmula para el éxito en UX/UI.</p>
+                    <p class="quote">"El primer paso para diseñar algo increíble es tener el coraje de creer que es posible. El segundo es fallar en ello y darse cuenta de que no sabes nada. El tercero es iterar hasta que lo logres." – Tim Brown</p>
+                    <a href="https://drive.google.com/file/d/1HbliwHW5bCz04YAaymtr1vq1Jxf9CEsX/view?usp=sharing"class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver CV</a>
+                </div>    
+                <!-- Columna derecha -->
+                <div class="skills-right">
+                    <p>Mi toolkit profesional se enfoca en la entrega de valor al equipo. Priorizo la comunicación abierta y la colaboración como pilares para traducir la investigación en diseños de alto impacto, siempre con la accesibilidad en mente.</p>
+                    <div class="skills-lists">
+                        <div class="skills-list">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Empatía y Enfoque Inclusivo</li>
+                                <li>Comunicación Inter-Funcional</li>
+                                <li>Resolución de Problemas</li>
+                                <li>Colaboración y Scrum</li>
+                                <li>Pensamiento Analítico y Crítico</li>
+                            </ul>
+                        </div>
+                        <div class="skills-list">
+                            <h4>Hard Skills</h4>
+                            <ul>
+                                <li>Figma (Prototipado, Design Systems)</li>
+                                <li>UX Research y Usability Testing</li>
+                                <li>Accesibilidad (WCAG)</li>
+                                <li>Wireframing & Arq. Información</li>
+                                <li>Adobe Suite</li>
+                            </ul>
+                        </div> 
+                    </div>    
+                </div>    
+            </div>       
+        </section>
+
+        <!-- Contacto section-->
+        <section id="contact" class="section">
+            <h2>Contact: Hablemos de tu Próximo Proyecto</h2>
+            <div class="contact-container">
+
+                 <!--Columna izquierda-->
+                <div class="contact-left">
+                    <h3>¡Conversemos!</h3>
+                    <p>Si buscas una diseñadora UX/UI con visión técnica y un enfoque centrado en la usabilidad, ¡Escribime!
+                    Estoy abierta a oportunidades remotas y proyectos que generen un impacto positivo.</p>
+                </div>
+                
+                <!--Columna derecha-->
+                <div class="contact-right">
+                    <div class="contact-columns">
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Buenos Aires, Argentina.</p>
+                        </div>
+                        <div>
+                            <h4>Disponibilidad</h4>
+                            <p>Remota global.</p>
+                        </div>
+                    </div>        
+                    <p>Email: melodylabati@gmail.com</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/melody-victoria-labati-morochowicz/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <img src="img/Linkedin.png" alt="Logo_linkedin">
+                        </a>
+                         <a href="https://www.behance.net/melodylabati-mvlm" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <img src="img/behance.png" alt="Logo_behance">
+                        </a>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/mmlv.png" alt="Logo_footer_mmlv">
+            </div>
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social"> 
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/melody-victoria-labati-morochowicz/">Linkedin</a></li>
+                    <li><a href="https://www.behance.net/melodylabati-mvlm">Behance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>            
+        <p class="footer-rights">Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
